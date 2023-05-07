@@ -62,9 +62,44 @@ OBS.: O sistema deve fornecer requisitos de acessibilidade e fornecer boa usabil
 Os mockups para nossa Bookstore foram preparados em [MockFlow](https://www.mockflow.com/). Contamos com um diagrama de navegação que conta com todas as páginas HTML que consistirão do projeto, e, acompanhado a isso, link HTML para visualização dessas telas mockups.
 
 
+### 2.1 Visão geral
+
+Parece bastante coisa, né? É porque realmente são muitas coisas. Mas iremos explicar detalhadamente cada seção do diagrama de navegação.
+
+![Bookstore Flow](https://user-images.githubusercontent.com/38444497/236654309-692c855e-93bc-47e1-8b7e-e486a29afe38.svg)
+
+
+### 2.2 Seção "Meta"
+
+Essa trecho da navegação é referente àquela parte do site que é voltada só para separar e fornecer ao usuário informações relevantes sobre a loja em si. Não possuem nenhuma funcionalidade específica em termos de backend.
+
+![Seção Meta](https://user-images.githubusercontent.com/38444497/236654356-efcb57cf-d37a-4fec-addd-4e1b28815b89.png)
+
+### 2.3 Seção cadastro/login
+
+![Cadastro e login](https://user-images.githubusercontent.com/38444497/236654383-543b8683-f57f-499a-8726-23004c5bdfa0.png)
+
+### 2.4 Seção do administrador
+
+![Admin](https://user-images.githubusercontent.com/38444497/236654404-7392f79e-224f-4de7-8162-1af7838c0d7c.png)
+
+
+### 2.5 Seção dos produtos
+
+![Produtos/Índice](https://user-images.githubusercontent.com/38444497/236654445-5d7c4fab-4196-4b02-a864-dee49eb1a555.png)
+
+
+### 2.6 Seção prosseguindo com a compra
+
+Esse trecho está relacionado com a seção dos produtos mas só é possível acessá-lo caso o usuário esteja logado. Por falar nisso, um usuário logado é capaz de alterar seus dados cadastrais.
+
+![Usuário/compra](https://user-images.githubusercontent.com/38444497/236654493-08341033-d35b-4d6a-b0e6-bee7a1470e35.png)
+
+
+
 # 3. Comentários sobre o código
 
-Para o Milestone 1, ainda não temos nada funcional pronto. Apenas UI e algumas páginas HTML/CSS pensadas do ponto de vista do front-end. 
+Para o Milestone 1, ainda não temos nada funcional pronto (em termos de backend utilizando javascript). Apenas UI e algumas páginas HTML/CSS pensadas do ponto de vista do front-end. 
   
 # 4. Plano de Teste
 
