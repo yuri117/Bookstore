@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore: Login</title>
 
     <!--icone do menu sanduiche-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -24,10 +25,10 @@
     <!--CSS-->
     <link rel="stylesheet" href="../style/media-query.css">
     <link rel="stylesheet" href="../style/default.css">
-    <link rel="stylesheet" href="../style/info_produto.css">
-
-    <title>FVY - info_produto</title>
+    <link rel="stylesheet" href="../style/loginpage.css">
 </head>
+
+
 <body onresize="mudouTamanho()">
     <header>
         <img src="../visual/logo_teste.png" alt="Logo do Site">
@@ -36,79 +37,30 @@
         <i id="burguer" class="material-icons" onclick="clickMenu()">menu</i>
         <menu id="itens">
             <ul>
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="../index.html">Inicio</a></li>
                 <li><a href="#">Sobre</a></li>
                 <li><a href="#">Serviços</a></li>
                 <li><a href="#">Contato</a></li>
             </ul>
         </menu>        
     </header>
-    <!--Primeira section será dividida entre fotos do livro e suas informações, basicamente duas divs com flex box-->
-    <section class="info_book">
-        <div class="container">
-            <div id="thumbs">
-                <img src="./../visual/livros/a_garota_do_lago.jpg" alt="A garota do Lago">
+    <section id="main-container">
+        <div id="form-section">
+            <img src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/48/null/external-profile-social-media-ui-tanah-basah-glyph-tanah-basah.png"/>
+            <h2 class="h2-label">Login</h2>
+            <input class="input-login-form" name="login" type="text" placeholder="Email ou username">
+            <input class="input-login-form" name="senha" type="password" type="text" placeholder="Senha">
+            <button class="button-form" type="submit">Entrar</button>
+            <p><a target="_self" href="#"> Esqueceu a senha? </a></p>
+            <p>Entre utilizando suas redes sociais:</p>
+            <div id="login-with-api">
+                <a href="" class="fa fa-google" target="_blank">  Google</a>
+                <a href="" class="fa fa-facebook" target="_blank">  Facebook</a>
             </div>
-            <div id="infos">
-                <div>
-                    <h1><strong>A Garota do Lago</strong></h1>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, ad necessitatibus provident sequi illum quia aliquam, minima assumenda, dolor tenetur obcaecati architecto. Error rerum numquam cumque est tenetur magnam omnis?</p>
-                </div>
-                <hr size="1">
-                <div>
-                    <p>Categoria: </p>
-                    <p>Autor: </p>
-                    <p>Editora: </p>
-                    <p>Idioma: </p>
-
-                </div>
-                <hr size="1">
-                <div id="preco">
-                    <h2 style="padding-right: 20px;">R$ 29,90</h2>
-                    <input type="button" name="menos" id="menos" value="-" />
-                    <input type="text" name="qtd" id="qtd" pattern="[0-9]+" value="1" size="3">
-                    <input type="button" name="mais" id="mais" value="+" />
-                </div>
-                <button>Comprar</button>
-                <button>Adicionar ao Carrinho</button>
-
-            </div>
+            <p>Você é novo na Bookstore? <a target="_self" href="#">Cadastre-se.</a></p>
         </div>
     </section>
-
-    <!-- catalogo semelhantes-->
-    <div id="semelhantes">
-        <h1 style="width: 100%; text-align: center;">Livros que talvez você goste:</h1>
-        <span>
-            <img src="../visual/livros/o_homem_mais_rico_da_babilonia.jpg" alt="">
-            <p>Mindset: A nova psicologia do sucesso</p>
-            <p class="preco">R$ 99,90</p>
-            <a href="info_produto.html" class="botao_comprar">Comprar</a>
-        </span>
-        <span>
-            <img src="../visual/livros/o_homem_mais_rico_da_babilonia.jpg" alt="">
-            <p>Mindset: A nova psicologia do sucesso</p>
-            <p class="preco">R$ 99,90</p>
-            <a href="info_produto.html" class="botao_comprar">Comprar</a>
-        </span>
-        <span>
-            <img src="../visual/livros/o_homem_mais_rico_da_babilonia.jpg" alt="">
-            <p>Mindset: A nova psicologia do sucesso</p>
-            <p class="preco">R$ 99,90</p>
-            <a href="info_produto.html" class="botao_comprar">Comprar</a>
-        </span>
-        <span>
-            <img src="../visual/livros/o_homem_mais_rico_da_babilonia.jpg" alt="">
-            <p>Mindset: A nova psicologia do sucesso</p>
-            <p class="preco">R$ 99,90</p>
-            <a href="info_produto.html" class="botao_comprar">Comprar</a>
-        </span>
-    </div>
-
-
-
-
-
+    
     <footer>
         <div id="redes">
             <img src="../visual/logo_teste.png" alt="Logo do Site">
@@ -155,6 +107,5 @@
             </ul>
         </div>
     </footer>
-    
 </body>
 </html>

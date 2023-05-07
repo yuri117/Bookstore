@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FVY</title>
 
     <!--icone do menu sanduiche-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -18,15 +17,17 @@
     <!--icones redes sociais-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!--JS-->
+    <script src="../js/script.js"></script>
+    <script src="../js/script_produto.js"></script>
+
     <!--CSS-->
     <link rel="stylesheet" href="../style/media-query.css">
     <link rel="stylesheet" href="../style/default.css">
-    <link rel="stylesheet" href="../style/home.css">
+    <link rel="stylesheet" href="../style/info_produto.css">
 
-    <!--JS-->
-    <script src="../js/script.js"></script>
+    <title>FVY - info_produto</title>
 </head>
-
 <body onresize="mudouTamanho()">
     <header>
         <img src="../visual/logo_teste.png" alt="Logo do Site">
@@ -35,80 +36,78 @@
         <i id="burguer" class="material-icons" onclick="clickMenu()">menu</i>
         <menu id="itens">
             <ul>
-                <li><a href="#">Início</a></li>
+                <li><a href="../index.html">Inicio</a></li>
                 <li><a href="#">Sobre</a></li>
                 <li><a href="#">Serviços</a></li>
                 <li><a href="#">Contato</a></li>
             </ul>
         </menu>        
-        
     </header>
-    <section id="promocoes">
-        <!--PROMOCOES (DE 89,90 POR 39,90, 50% 0FF!, etc...)-->
-        <picture> <!--fazendo responsivade com a tag <picture> aqui-->
-            <source media="(max-width: 678px)" srcset="../visual/promocoes/promocoes5_gorda.png">
-            <img id="promo_img" src="../visual/promocoes/promocoes5.webp" alt="Promocao do Dia">
-        </picture>
-    </section>
-    <main id="catalogos">
-        <!-- Primeiro catalogo -->
-        <h1>Os Mais Vendidos</h1>
-        <div id="mais_vendidos">
-            <span>
-                <img src="../visual/livros/o_homem_mais_rico_da_babilonia.jpg" alt="">
-                <p>Mindset: A nova psicologia do sucesso</p>
-                <p class="preco">R$ 99,90</p>
-                <a href="info_produto.html" class="botao_comprar">Comprar</a>
-            </span>
-            <span>
-                <img src="../visual/livros/o_homem_mais_rico_da_babilonia.jpg" alt="">
-                <p>Mindset: A nova psicologia do sucesso</p>
-                <p class="preco">R$ 99,90</p>
-                <a href="info_produto.html" class="botao_comprar">Comprar</a>
-            </span>
-            <span>
-                <img src="../visual/livros/o_homem_mais_rico_da_babilonia.jpg" alt="">
-                <p>Mindset: A nova psicologia do sucesso</p>
-                <p class="preco">R$ 99,90</p>
-                <a href="info_produto.html" class="botao_comprar">Comprar</a>
-            </span>
-            <span>
-                <img src="../visual/livros/o_homem_mais_rico_da_babilonia.jpg" alt="">
-                <p>Mindset: A nova psicologia do sucesso</p>
-                <p class="preco">R$ 99,90</p>
-                <a href="info_produto.html" class="botao_comprar">Comprar</a>
-            </span>
-        </div>
-        <!-- Segundo catalogo -->
-        <h1>Lançamentos</h1>
-        <div id="lancamentos">
-            <span>
-                <img src="../visual/livros/o_homem_mais_rico_da_babilonia.jpg" alt="">
-                <p>Mindset: A nova psicologia do sucesso</p>
-                <p class="preco">R$ 99,90</p>
-                <a href="info_produto.html" class="botao_comprar">Comprar</a>
-            </span>
-            <span>
-                <img src="../visual/livros/o_homem_mais_rico_da_babilonia.jpg" alt="">
-                <p>Mindset: A nova psicologia do sucesso</p>
-                <p class="preco">R$ 99,90</p>
-                <a href="info_produto.html" class="botao_comprar">Comprar</a>
-            </span>
-            <span>
-                <img src="../visual/livros/o_homem_mais_rico_da_babilonia.jpg" alt="">
-                <p>Mindset: A nova psicologia do sucesso</p>
-                <p class="preco">R$ 99,90</p>
-                <a href="info_produto.html" class="botao_comprar">Comprar</a>
-            </span>
-            <span>
-                <img src="../visual/livros/o_homem_mais_rico_da_babilonia.jpg" alt="">
-                <p>Mindset: A nova psicologia do sucesso</p>
-                <p class="preco">R$ 99,90</p>
-                <a href="info_produto.html" class="botao_comprar">Comprar</a>
-            </span>
-        </div>
+    <!--Primeira section será dividida entre fotos do livro e suas informações, basicamente duas divs com flex box-->
+    <section class="info_book">
+        <div class="container">
+            <div id="thumbs">
+                <img src="./../visual/livros/a_garota_do_lago.jpg" alt="A garota do Lago">
+            </div>
+            <div id="infos">
+                <div>
+                    <h1><strong>A Garota do Lago</strong></h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, ad necessitatibus provident sequi illum quia aliquam, minima assumenda, dolor tenetur obcaecati architecto. Error rerum numquam cumque est tenetur magnam omnis?</p>
+                </div>
+                <hr size="1">
+                <div>
+                    <p>Categoria: </p>
+                    <p>Autor: </p>
+                    <p>Editora: </p>
+                    <p>Idioma: </p>
 
-    </main>
+                </div>
+                <hr size="1">
+                <div id="preco">
+                    <h2 style="padding-right: 20px;">R$ 29,90</h2>
+                    <input type="button" name="menos" id="menos" value="-" />
+                    <input type="text" name="qtd" id="qtd" pattern="[0-9]+" value="1" size="3">
+                    <input type="button" name="mais" id="mais" value="+" />
+                </div>
+                <button>Comprar</button>
+                <button>Adicionar ao Carrinho</button>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- catalogo semelhantes-->
+    <div id="semelhantes">
+        <h1 style="width: 100%; text-align: center;">Livros que talvez você goste:</h1>
+        <span>
+            <img src="../visual/livros/o_homem_mais_rico_da_babilonia.jpg" alt="">
+            <p>Mindset: A nova psicologia do sucesso</p>
+            <p class="preco">R$ 99,90</p>
+            <a href="info_produto.html" class="botao_comprar">Comprar</a>
+        </span>
+        <span>
+            <img src="../visual/livros/o_homem_mais_rico_da_babilonia.jpg" alt="">
+            <p>Mindset: A nova psicologia do sucesso</p>
+            <p class="preco">R$ 99,90</p>
+            <a href="info_produto.html" class="botao_comprar">Comprar</a>
+        </span>
+        <span>
+            <img src="../visual/livros/o_homem_mais_rico_da_babilonia.jpg" alt="">
+            <p>Mindset: A nova psicologia do sucesso</p>
+            <p class="preco">R$ 99,90</p>
+            <a href="info_produto.html" class="botao_comprar">Comprar</a>
+        </span>
+        <span>
+            <img src="../visual/livros/o_homem_mais_rico_da_babilonia.jpg" alt="">
+            <p>Mindset: A nova psicologia do sucesso</p>
+            <p class="preco">R$ 99,90</p>
+            <a href="info_produto.html" class="botao_comprar">Comprar</a>
+        </span>
+    </div>
+
+
+
+
 
     <footer>
         <div id="redes">
@@ -156,5 +155,6 @@
             </ul>
         </div>
     </footer>
+    
 </body>
 </html>
