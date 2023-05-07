@@ -78,6 +78,8 @@ Além disso, contamos com um diagrama de navegação que conta com todas as pág
 
 Iremos explicar detalhadamente cada seção do diagrama de navegação. Essa imagem está no formato vetorial .svg, isso significa que você pode abri-la livremente e conseguirá dar zoom nela sem que haja perda na qualidade da imagem.
 
+O diagrama completo, que contém links para a visualizção das telas (mockups para as UIs do webapp) pode ser acessado pelo link: https://lucid.app/lucidchart/81437ac7-f0bd-459f-996d-ff14941ca206/edit?viewport_loc=-156%2C252%2C2219%2C1061%2C0_0&invitationId=inv_913eef89-52ff-46ef-bd46-5a367316fad5
+
 ![Bookstore Flow-white](https://user-images.githubusercontent.com/38444497/236654522-6646019f-e090-4187-862d-fbc059fc717b.svg)
 
 
