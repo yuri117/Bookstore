@@ -55,7 +55,7 @@ OBS.: O sistema deve fornecer requisitos de acessibilidade e fornecer boa usabil
 5. Clientes e administradores podem fazer logout e utilizar o site no modo deslogado
 6. Sistema conta com um sistema de fidelidade baseado em coins ganhadas a partir de compras acumuladas
 7. O cliente consegue adicionar e remover vários produtos de seu carrinho. Além de visualizar o subtotal da compra.
-8. Se o cliente estiver logado e deseje prosseguir com sua compra, ele seguirá para a página de finalização da compra.
+8. Se o cliente estiver logado e desejar prosseguir com sua compra, ele seguirá para a página de finalização da compra.
 
 ------------------------------------------------------------------------------------------------------------------
 
