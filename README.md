@@ -1,4 +1,4 @@
-# Bookstore - Projeto de Loja Online da disciplina SCC0219 - Introdução ao Desenvolvimento Web
+# Bookstore - Project Report
 
 # Identificação do Grupo
 
@@ -12,9 +12,11 @@
 # 1. Requisitos 
 
 ### 1.1 Sobre
+
 Uma livraria nos contratou para desenvolvermos a versão online de sua loja de livros. Nesta loja, a empresa pretende anunciar livros de diversas categorias (romance, ação, drama, aventura, etc) para que seus clientes possam comprá-los e recebê-los em suas residências. Logo, cabe a nós desenvolver uma aplicação Web para esta loja. A aplicação conta com dois tipos de usuários: os clientes da loja, que acessam o sistema para comprar livros, e os administradores, que serão responsáveis por gerenciar o estoque dos produtos e os cadastros dos usuários.
 
 ### 1.2 Funcionalidades (checklist do projeto)
+
 
 > 1 - O sistema deve ter 2 tipos de usuários: _Clientes_ e _Administradores_.
 
