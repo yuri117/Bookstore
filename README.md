@@ -64,8 +64,11 @@ OBS.: O sistema deve fornecer requisitos de acessibilidade e fornecer boa usabil
 Os mockups para nossa Bookstore foram preparados na plataforma MockFlow. [MockFlow](https://www.mockflow.com/). A versão gratuita da plataforma só permite a criação de no máximo 3 webpages por usuário, então utilizamos vários usuários para criar todos os mockups do sistema:
 
 [Home, Login, Info Produto](https://wireframepro.mockflow.com/view/index_grupo23#/page/52b53b8fd7d541758d7ba391033f0833)
+
 [Sobre, Nossas Lojas, Fale Conosco](https://wireframepro.mockflow.com/view/MX0CdFZXHh#/page/842f8bfc4eb341e5aef19766ff51493c)
+
 [Cadastro, Compra1, Compra2](https://wireframepro.mockflow.com/view/MwbK7lM4fpb#/page/967fa83b35354956b209198a3febb233)
+
 [Compra3, Compra4, Usuário](https://wireframepro.mockflow.com/view/MswpYyhJfpb#/page/ccbd5328dca0457bbbcd9a6ea0cebabf)
 
 Além disso, contamos com um diagrama de navegação que conta com todas as páginas HTML que consistirão do projeto, e, acompanhado a isso, um link para visualização dos mockups dessas páginas.
