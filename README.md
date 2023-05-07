@@ -64,9 +64,9 @@ Os mockups para nossa Bookstore foram preparados em [MockFlow](https://www.mockf
 
 ### 2.1 Visão geral
 
-Parece bastante coisa, né? É porque realmente são muitas coisas. Mas iremos explicar detalhadamente cada seção do diagrama de navegação.
+Parece bastante coisa, né? É porque realmente são muitas coisas. Mas iremos explicar detalhadamente cada seção do diagrama de navegação. Essa imagem está no formato vetorial .svg, isso significa que você pode abri-la livremente e conseguirá dar zoom nela sem que haja perda na qualidade da imagem.
 
-![Bookstore Flow](https://user-images.githubusercontent.com/38444497/236654309-692c855e-93bc-47e1-8b7e-e486a29afe38.svg)
+![Bookstore Flow-white](https://user-images.githubusercontent.com/38444497/236654522-6646019f-e090-4187-862d-fbc059fc717b.svg)
 
 
 ### 2.2 Seção "Meta"
