@@ -61,12 +61,12 @@ OBS.: O sistema deve fornecer requisitos de acessibilidade e fornecer boa usabil
 
 # 2. Descrição do Projeto
 
-Os mockups para nossa Bookstore foram preparados em [MockFlow](https://www.mockflow.com/). Contamos com um diagrama de navegação que conta com todas as páginas HTML que consistirão do projeto, e, acompanhado a isso, link HTML para visualização dessas telas mockups.
+Os mockups para nossa Bookstore foram preparados em [MockFlow](https://www.mockflow.com/). Contamos com um diagrama de navegação que conta com todas as páginas HTML que consistirão do projeto, e, acompanhado a isso, um link para visualização dos mockups dessas páginas.
 
 
 ### 2.1 Visão geral
 
-Parece bastante coisa, né? É porque realmente são muitas coisas. Mas iremos explicar detalhadamente cada seção do diagrama de navegação. Essa imagem está no formato vetorial .svg, isso significa que você pode abri-la livremente e conseguirá dar zoom nela sem que haja perda na qualidade da imagem.
+Iremos explicar detalhadamente cada seção do diagrama de navegação. Essa imagem está no formato vetorial .svg, isso significa que você pode abri-la livremente e conseguirá dar zoom nela sem que haja perda na qualidade da imagem.
 
 ![Bookstore Flow-white](https://user-images.githubusercontent.com/38444497/236654522-6646019f-e090-4187-862d-fbc059fc717b.svg)
 
