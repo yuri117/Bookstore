@@ -5,7 +5,7 @@
 |        **Nome**         | **nUSP** |
 |:-----------------------:|:--------:|
 | Felipi Yuri Santos      | 11917292 |
-| Vinicius Carneiro Macedo|          |
+| Vinicius Carneiro Macedo| 11915752 |
 | Yuri Fernandes Pereira  | 13730127 |
 
 
