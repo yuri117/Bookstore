@@ -114,6 +114,8 @@ Esse trecho está relacionado com a seção dos produtos mas só é possível ac
 # 3. Comentários sobre o código
 
 Para o Milestone 1, ainda não temos nada funcional pronto (em termos de backend utilizando javascript). Apenas UI e algumas páginas HTML/CSS pensadas do ponto de vista do front-end. 
+Foi implementado um menu "sanduíche" no cabecalho das paginas, conforme o grupo aprendeu no vídeo sobre CSS.
+Encontramos muita dificuldade na elaboração do footer das paginas, pretendemos deixá-lo 100% responsivo para as proximas Milestones ou entao implementar um footer mais simples.
   
 # 4. Plano de Teste
 
