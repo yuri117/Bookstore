@@ -1,0 +1,165 @@
+/*CSS padrao para todas as paginas (todas vao ter o mesmo header e footer)*/
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(Raleway-VariableFont_wght.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root { /*variaveis para paleta de cores e para as fontes*/
+    --cor0: #8dbeda;
+    --cor1: #67a8cd;
+    --cor2: #4292bf;
+    --cor3: #357599;
+    --cor4: #295872;
+
+    --fonte-padrao: 'Raleway', cursive;
+    --fonte-destaque: Arial, Verdana, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: var(--cor0);
+}
+
+header {
+    background-color: var(--cor3);
+    /*min-height: 100px;*/
+    padding-top: 15px;
+}
+
+header > img {
+    width: 120px;
+    display: inline-block;
+    margin-left: 30px;
+    margin-right: 15px;
+    margin-top: -10px;
+}
+
+i#burguer {
+    background-color: var(--cor3);
+    display: inline-block;
+    width: 40px;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 40px;
+    margin-top: -10px;
+}
+
+i#entrar, i#finalizar_compra {
+    background-color: var(--cor3);
+    width: 40px;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 40px;
+    float: right;
+    margin-right: 15px;
+    margin-top: -10px;
+}
+
+i#burguer:hover, i#entrar:hover,  i#finalizar_compra:hover{
+    background-color: var(--cor0);
+}
+
+menu {
+    display: none;
+    padding-bottom: 5px;
+}
+
+menu > ul {
+    display: block;
+    list-style-type: none;
+}
+
+menu > ul > li > a {
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+    font-family: var(--fonte-padrao);
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--cor2);
+    color: black;
+    border: 1px solid black;
+}
+
+menu > ul > li > a:hover{
+    background-color: yellow;
+}
+
+footer {
+    background-color: var(--cor4);
+}
+
+footer > div#redes > img {
+    width: 120px;
+    display: inline-block;
+    margin-left: 30px;
+    margin-right: 15px;
+    margin-top: 10px;
+}
+
+footer > div#redes > ul {
+    list-style-type: none;
+    list-style-position: inside;
+    columns: 5;
+    float: right;
+}
+
+.fa {
+    color: black;
+    font-size: 1.5em;
+    text-decoration: none;
+    margin-top: 10px;
+    padding: 15px;
+}
+
+.fa:hover {
+    background-color: var(--cor2);
+}
+
+footer > div#atendimento {
+    background-color: black;
+    color: white;
+    height: 300px;
+}
+
+footer > div#atendimento > ul {
+    list-style-type: none;
+    list-style-position: inside;
+    columns: 3;
+    color: white;  
+    margin: auto;  
+}
+
+footer > div#atendimento > ul > li > p {
+    font-style: var(--fonte-padrao);
+    font-size: 1.5em;
+    padding-top: 15px;  
+}
+
+footer > div#atendimento > ul > li > ul {
+    list-style-type: none;
+    list-style-position: inside;
+    columns: 1;
+}
+
+footer > div#atendimento > ul > li > ul > li {
+    padding-top: 20px;
+    font-size: 1.2em;
+}
+
+footer > div#atendimento > ul > li > ul > li > a {
+    color: white;
+    text-decoration: none;
+}

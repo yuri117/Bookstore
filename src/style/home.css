@@ -1,0 +1,102 @@
+/*CSS para a pagina inicial (HOME), usa o default.css para header e o footer, mas possui o proprio estilo para o main*/
+
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(Raleway-VariableFont_wght.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root { /*variaveis para paleta de cores e para as fontes*/
+    --cor0: #8dbeda;
+    --cor1: #67a8cd;
+    --cor2: #4292bf;
+    --cor3: #357599;
+    --cor4: #295872;
+
+    --fonte-padrao: 'Raleway', cursive;
+    --fonte-destaque: Arial, Verdana, Helvetica, sans-serif;
+}
+
+section#promocoes {
+    display: block;
+    max-width: 1100px;
+    margin: auto;
+}
+
+img#promo_img {
+    width: 100%;
+    margin: auto;
+}
+
+main {
+    background-color: white;
+    min-width: 300px;
+    max-width: 1100px;
+    margin: auto;
+    margin-bottom: 30px;    
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+main > h1 {
+    font-family: var(--fonte-destaque);
+    padding: 30px 20px;
+    font-weight: normal;
+    font-size: 1.5em;
+}
+
+div#mais_vendidos, div#lancamentos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+main > div > span {
+    display: inline-block;
+    width: 240px;
+    max-height: 500px;
+    background-color: var(--cor0);
+    margin: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418);
+}
+
+main > div > span > img {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+}
+
+main > div > span > p {
+    font-family: var(--fonte-destaque);
+    margin: 10px;
+    font-size: 1.1em;
+}
+
+main > div > span > p.preco {
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+main > div > span > a {
+    display: block;
+    background-color: var(--cor2);
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    width: 100px;
+    margin: 10px auto;
+    font-family: var(--fonte-destaque);
+}
+
+main > div > span > a:hover {
+    background-color: yellow;
+}

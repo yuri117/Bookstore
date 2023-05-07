@@ -1,0 +1,73 @@
+#main-container{
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    justify-content: start;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    margin: 15vh auto;   
+}
+
+#form-section{
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    justify-content: start;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418);
+    min-width: 400px;
+    width: 40%;
+    max-width: 600px;
+}
+
+.button-form{
+    background-color: var(--cor2);
+    color: #1f1e33;
+    font-weight: 600;
+    margin: 16px 0px;
+    font-size: 1.1em;
+    padding: 10px 30px;
+}
+
+.button-form:hover{
+    background-color: var(--cor3);
+    cursor: pointer;
+}
+
+.h2-label{
+    color: #000;
+    font-weight: 600;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.input-login-form{
+    padding: 11px 16px;
+    position: relative;
+    border-style: solid;
+    border-width: 0.0625rem;
+    border-radius: 0.25rem;
+    border-color: rgb(127, 133, 141);
+    margin: 16px 0px;
+    font-size: 1.1em;
+    width: 90%;
+}
+
+#form-section > p {
+    font-family: var(--fonte-padrao);
+    padding: 10px;
+}
+
+#login-with-api{
+    display: flex;
+    flex-direction: row;
+    -webkit-box-pack: start;
+    justify-content: start;
+    -webkit-box-align: center;
+    align-items: center;
+}
