@@ -41,7 +41,7 @@ Os administradores podem criar/atualizar/ler/excluir (crud) novos produtos e ser
 
 > 4 - Sua funcionalidade
 
-Crie uma funcionalidade específica para seu aplicativo. No nosso projeto, usaremos um sistema de fidelidade chamado coins. Que são moedas ganhadas a cada x compras. O financeiro que será responsável pela decisão de quantos R$ gastos valem cada moeda (exemplo R$ 100 = 50 moedas).
+"Crie uma funcionalidade específica para seu aplicativo": no nosso projeto, usaremos um sistema de fidelidade dos clientes batizado de "BookPoints". Trata-se se pontos recompensados ao cliente à medida que ele conclua novas compras. A cada R$ 20,00 em compras, o cliente recebe 1 BookPoint. Cada 1 BookPoint vale R$ 1,00 de desconto em compras futuras.
 
 OBS.: O sistema deve fornecer requisitos de acessibilidade e fornecer boa usabilidade. O sistema deve ser responsivo, o que significa que deve concluir as tarefas atribuídas dentro de um tempo razoável.
 
@@ -51,9 +51,9 @@ OBS.: O sistema deve fornecer requisitos de acessibilidade e fornecer boa usabil
 1. Clientes e administradores logam em suas páginas através de um login.html
 2. Adminstradores conseguem alterar seus próprios dados
 3. Clientes podem alterar seus dados
-4. Administradores conseguem atualizar as bases de dados dos produtos em estoque (valor, descrição, preço, etc)
-5. Clientes e administradores podem fazer logout e utilizar o site no modo deslogado
-6. Sistema conta com um sistema de fidelidade baseado em coins ganhadas a partir de compras acumuladas
+4. Administradores conseguem atualizar as bases de dados dos produtos em estoque (quantidade, descrição, preço, etc).
+5. Clientes e administradores podem fazer logout e utilizar o site no modo deslogado.
+6. Sistema conta com um sistema de fidelidade baseado em pontos recompensados a partir de compras concluídas.
 7. O cliente consegue adicionar e remover vários produtos de seu carrinho. Além de visualizar o subtotal da compra.
 8. Se o cliente estiver logado e desejar prosseguir com sua compra, ele seguirá para a página de finalização da compra.
 
@@ -61,7 +61,7 @@ OBS.: O sistema deve fornecer requisitos de acessibilidade e fornecer boa usabil
 
 # 2. Descrição do Projeto
 
-Os mockups para nossa Bookstore foram preparados em [MockFlow](https://www.mockflow.com/). Contamos com um diagrama de navegação que conta com todas as páginas HTML que consistirão do projeto, e, acompanhado a isso, um link para visualização dos mockups dessas páginas.
+Os mockups para nossa Bookstore foram preparados no site [MockFlow](https://www.mockflow.com/). Contamos com um diagrama de navegação que conta com todas as páginas HTML que consistirão do projeto, e, acompanhado a isso, um link para visualização dos mockups dessas páginas.
 
 
 ### 2.1 Visão geral
