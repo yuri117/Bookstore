@@ -71,7 +71,7 @@ Os mockups para nossa Bookstore foram preparados na plataforma MockFlow. A vers�
 
 [Compra3, Compra4, Usuário](https://wireframepro.mockflow.com/view/MswpYyhJfpb#/page/ccbd5328dca0457bbbcd9a6ea0cebabf)
 
-Além disso, contamos com um diagrama de navegação que conta com todas as páginas HTML que consistirão do projeto, e, acompanhado a isso, um link para visualização dos mockups dessas páginas.
+Além disso, contamos com um diagrama de navegação que conta com todas as páginas HTML que consistirão do projeto, e, acompanhado a isso, um link para visualização dos mockups das respectivas páginas.
 
 
 ### 2.1 Visão geral
