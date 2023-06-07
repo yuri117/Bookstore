@@ -279,6 +279,76 @@
             "preco": "50.35",
             "estoque": "15",
             "nome_arquivo": "tres_irmas"
-        }
+        },
+        {
+            "nome": "A Extravagância do Morto",
+            "categoria": "suspense",
+            "preco": "23.33",
+            "estoque": "2",
+            "nome_arquivo": "a_extravagancia_do_morto"
+        },
+        {
+            "nome": "A garota do lago",
+            "categoria": "suspense",
+            "preco": "11.99",
+            "estoque": "22",
+            "nome_arquivo": "a_garota_do_lago"
+        },
+        {
+            "nome": "A Incógnita do Despertar",
+            "categoria": "suspense",
+            "preco": "13.43",
+            "estoque": "72",
+            "nome_arquivo": "a_incognita_do_despertar"
+        },
+        {
+            "nome": "Jantar secreto",
+            "categoria": "suspense",
+            "preco": "44.90",
+            "estoque": "10",
+            "nome_arquivo": "jantar_secreto"
+        },
+        {
+            "nome": "Nêmesis",
+            "categoria": "suspense",
+            "preco": "34.90",
+            "estoque": "86",
+            "nome_arquivo": "nemesis"
+        },
+        {
+            "nome": "O Mistério dos Sete Relógios",
+            "categoria": "suspense",
+            "preco": "28.00",
+            "estoque": "60",
+            "nome_arquivo": "o_misterio_dos_sete_relogios"
+        },
+        {
+            "nome": "Portal do destino",
+            "categoria": "suspense",
+            "preco": "29.99",
+            "estoque": "3",
+            "nome_arquivo": "portal_do_destino"
+        },
+        {
+            "nome": "Testemunha Ocular do Crime",
+            "categoria": "suspense",
+            "preco": "26.10",
+            "estoque": "96",
+            "nome_arquivo": "testemunha_ocular_do_crime"
+        },
+        {
+            "nome": "Um Passe de Mágica",
+            "categoria": "suspense",
+            "preco": "25.33",
+            "estoque": "40",
+            "nome_arquivo": "um_passe_de_magica"
+        },
+        {
+            "nome": "Uma Dose Mortal",
+            "categoria": "suspense",
+            "preco": "23.92",
+            "estoque": "27",
+            "nome_arquivo": "uma_dose_mortal"
+        }         
     ]
 }
