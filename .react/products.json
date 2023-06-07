@@ -1,0 +1,25 @@
+{
+    "livros": [
+        {
+            "nome": "A coragem de ser imperfeito",
+            "categoria": "autoajuda",
+            "preco": "27.90",
+            "estoque": "154",
+            "nome_arquivo": "a_coragem_de_ser_imperfeito"
+        },
+        {
+            "nome": "A síndrome da boazinha",
+            "categoria": "autoajuda",
+            "preco": "13.60",
+            "estoque": "25",
+            "nome_arquivo": "a_coragem_de_ser_imperfeito"
+        },
+        {
+            "nome": "A sutil arte de ligar o f*da-se",
+            "categoria": "autoajuda",
+            "preco": "31.86",
+            "estoque": "67",
+            "nome_arquivo": "a_sutil_arte_de_ligar_o_foda_se"
+        }
+    ]
+}
