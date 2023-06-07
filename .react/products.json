@@ -20,6 +20,265 @@
             "preco": "31.86",
             "estoque": "67",
             "nome_arquivo": "a_sutil_arte_de_ligar_o_foda_se"
+        },
+        {
+            "nome": "Como fazer amigos e influenciar pessoas",
+            "categoria": "autoajuda",
+            "preco": "39.90",
+            "estoque": "12",
+            "nome_arquivo": "como_fazer_amigos_e_influenciar_pessoas"
+        },
+        {
+            "nome": "Mindset: a nova psicologia do sucesso",
+            "categoria": "autoajuda",
+            "preco": "36.90",
+            "estoque": "33",
+            "nome_arquivo": "como_fazer_amigos_e_influenciar_pessoas"
+        },
+        {
+            "nome": "O pequeno livro da vida",
+            "categoria": "autoajuda",
+            "preco": "19.90",
+            "estoque": "79",
+            "nome_arquivo": "o_pequeno_livro_da_vida"
+        },
+        {
+            "nome": "O poder da ação",
+            "categoria": "autoajuda",
+            "preco": "15.90",
+            "estoque": "107",
+            "nome_arquivo": "o_poder_da_acao"
+        },
+        {
+            "nome": "O poder da autorresponsabilidade",
+            "categoria": "autoajuda",
+            "preco": "16.90",
+            "estoque": "98",
+            "nome_arquivo": "o_poder_da_autorresponsabilidade"
+        },
+        {
+            "nome": "Os segredos da mente milionária",
+            "categoria": "autoajuda",
+            "preco": "25.50",
+            "estoque": "12",
+            "nome_arquivo": "os_segredos_da_mente_milionaria"
+        },
+        {
+            "nome": "Procrastinação",
+            "categoria": "autoajuda",
+            "preco": "31.40",
+            "estoque": "28",
+            "nome_arquivo": "procrastinacao"
+        },
+        {
+            "nome": "Harry Potter e a Câmara Secreta",
+            "categoria": "aventura",
+            "preco": "24.90",
+            "estoque": "25",
+            "nome_arquivo": "harry_potter_e_a_camara_secreta"
+        },
+        {
+            "nome": "Harry Potter e a Ordem da Fênix",
+            "categoria": "aventura",
+            "preco": "24.90",
+            "estoque": "29",
+            "nome_arquivo": "harry_potter_e_a_ordem_da_fenix"
+        },
+        {
+            "nome": "Harry Potter e a Pedra Filosofal",
+            "categoria": "aventura",
+            "preco": "24.90",
+            "estoque": "19",
+            "nome_arquivo": "harry_potter_e_a_pedra_filosofal"
+        },
+        {
+            "nome": "Harry Potter e as Relíquias da Morte",
+            "categoria": "aventura",
+            "preco": "24.90",
+            "estoque": "33",
+            "nome_arquivo": "harry_potter_e_as_reliquias_da_morte"
+        },
+        {
+            "nome": "Harry Potter e o Cálice de Fogo",
+            "categoria": "aventura",
+            "preco": "24.90",
+            "estoque": "30",
+            "nome_arquivo": "harry_potter_e_o_calice_de_fogo"
+        },
+        {
+            "nome": "Harry Potter e o Enigma do Príncipe",
+            "categoria": "aventura",
+            "preco": "24.90",
+            "estoque": "34",
+            "nome_arquivo": "harry_potter_e_o_enigma_do_principe"
+        },
+        {
+            "nome": "Harry Potter e o Prisioneiro de Azkaban",
+            "categoria": "aventura",
+            "preco": "24.90",
+            "estoque": "21",
+            "nome_arquivo": "harry_potter_e_o_prisioneiro_de_azkaban"
+        },
+        {
+            "nome": "O Senhor dos Anéis: A Sociedade do Anel",
+            "categoria": "aventura",
+            "preco": "44.90",
+            "estoque": "45",
+            "nome_arquivo": "o_senhor_dos_aneis_a_sociedade_do_anel"
+        },
+        {
+            "nome": "O Senhor dos Anéis: As Duas Torres",
+            "categoria": "aventura",
+            "preco": "44.90",
+            "estoque": "52",
+            "nome_arquivo": "o_senhor_dos_aneis_as_duas_torres"
+        },
+        {
+            "nome": "O Senhor dos Anéis: O Retorno do Rei",
+            "categoria": "aventura",
+            "preco": "44.90",
+            "estoque": "53",
+            "nome_arquivo": "o_senhor_dos_aneis_o_retorno_do_rei"
+        },
+        {
+            "nome": "A Hora da Estrela",
+            "categoria": "literatura",
+            "preco": "18.90",
+            "estoque": "60",
+            "nome_arquivo": "a_hora_da_estrela"
+        },
+        {
+            "nome": "Capitães da Areia",
+            "categoria": "literatura",
+            "preco": "26.40",
+            "estoque": "49",
+            "nome_arquivo": "capitaes_da_areia"
+        },
+        {
+            "nome": "Dom Casmurro",
+            "categoria": "literatura",
+            "preco": "16.00",
+            "estoque": "34",
+            "nome_arquivo": "dom_casmurro"
+        },
+        {
+            "nome": "Gabriela, cravo e canela",
+            "categoria": "literatura",
+            "preco": "27.90",
+            "estoque": "16",
+            "nome_arquivo": "gabriela_cravo_e_canela"
+        },
+        {
+            "nome": "Hamlet",
+            "categoria": "literatura",
+            "preco": "26.30",
+            "estoque": "77",
+            "nome_arquivo": "hamlet"
+        },
+        {
+            "nome": "Memória Póstumas de Brás Cubas",
+            "categoria": "literatura",
+            "preco": "17.00",
+            "estoque": "26",
+            "nome_arquivo": "memoria_postumas_de_bras_cubas"
+        },
+        {
+            "nome": "O Cortiço",
+            "categoria": "literatura",
+            "preco": "23.89",
+            "estoque": "11",
+            "nome_arquivo": "o_cortico"
+        },
+        {
+            "nome": "Romeu e Julieta",
+            "categoria": "literatura",
+            "preco": "13.27",
+            "estoque": "66",
+            "nome_arquivo": "romeu_e_julieta"
+        },
+        {
+            "nome": "Sentimento do Mundo",
+            "categoria": "literatura",
+            "preco": "27.99",
+            "estoque": "18",
+            "nome_arquivo": "sentimento_do_mundo"
+        },
+        {
+            "nome": "Vidas Secas",
+            "categoria": "literatura",
+            "preco": "39.00",
+            "estoque": "8",
+            "nome_arquivo": "vidas_secas"
+        },
+        {
+            "nome": "Até o verão terminar",
+            "categoria": "romance",
+            "preco": "32.90",
+            "estoque": "88",
+            "nome_arquivo": "ate_o_verao_terminar"
+        },
+        {
+            "nome": "Barulho de Cachoeira",
+            "categoria": "romance",
+            "preco": "30.80",
+            "estoque": "105",
+            "nome_arquivo": "barulho_de_cachoeira"
+        },
+        {
+            "nome": "Foi sem Querer que te Quis",
+            "categoria": "romance",
+            "preco": "49.40",
+            "estoque": "91",
+            "nome_arquivo": "foi_sem_querer_que_te_quis"
+        },
+        {
+            "nome": "Juntos para sempre",
+            "categoria": "romance",
+            "preco": "22.99",
+            "estoque": "50",
+            "nome_arquivo": "juntos_para_sempre"
+        },
+        {
+            "nome": "O intérprete de borboletas",
+            "categoria": "romance",
+            "preco": "29.99",
+            "estoque": "40",
+            "nome_arquivo": "o_interprete_de_borboletas"
+        },
+        {
+            "nome": "O mestre e Margarida",
+            "categoria": "romance",
+            "preco": "56.80",
+            "estoque": "13",
+            "nome_arquivo": "o_mestre_e_margarida"
+        },
+        {
+            "nome": "Poderosa Sedução",
+            "categoria": "romance",
+            "preco": "35.90",
+            "estoque": "27",
+            "nome_arquivo": "poderosa_seducao"
+        },
+        {
+            "nome": "Sem esperança",
+            "categoria": "romance",
+            "preco": "20.94",
+            "estoque": "51",
+            "nome_arquivo": "sem_esperanca"
+        },
+        {
+            "nome": "Torto arado",
+            "categoria": "romance",
+            "preco": "38.70",
+            "estoque": "23",
+            "nome_arquivo": "torto_arado"
+        },
+        {
+            "nome": "Três irmãs",
+            "categoria": "romance",
+            "preco": "50.35",
+            "estoque": "15",
+            "nome_arquivo": "tres_irmas"
         }
     ]
 }
