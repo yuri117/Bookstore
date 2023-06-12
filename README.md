@@ -127,7 +127,14 @@ Encontramos muita dificuldade na elaboração do footer das paginas, pretendemos
 > Text describing the test results. If an automatic test tool/framework is used, its output can be used.
   
 # 6. Procedimentos para execução
-> A step-by-step guide to run your code. You should start telling how to install whatever software you need, then how to download/build your program, and finally how to set up the environment to run it. Imagine that someone installing will just follow these commands (nothing more).
+
+Após clonar o repositório para sua máquina local, abra a pasta .react em um terminal e execute:
+
+npm install
+
+npm run dev
+
+CTRL + click no link que aparecer no terminal
   
 # 7. Problemas
 > List any major problems you had.
