@@ -131,12 +131,15 @@ Encontramos muita dificuldade na elaboração do footer das paginas, pretendemos
 Após clonar o repositório para sua máquina local, abra a pasta .react em um terminal e execute:
 
 npm install
+
 ![11](https://github.com/yuri117/Bookstore/assets/96321435/c5970db5-4225-4289-9539-2c1ec009f511)
 
 npm run dev
+
 ![22](https://github.com/yuri117/Bookstore/assets/96321435/86cfca5c-2618-4812-9854-323e76819bc7)
 
 CTRL + click no link que aparecer no terminal
+
 ![33](https://github.com/yuri117/Bookstore/assets/96321435/88d570df-bf31-4bb6-9b85-5876e887fbba)
 
 # 7. Problemas
