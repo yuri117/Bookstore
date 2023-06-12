@@ -143,7 +143,8 @@ CTRL + click no link que aparecer no terminal
 ![33](https://github.com/yuri117/Bookstore/assets/96321435/88d570df-bf31-4bb6-9b85-5876e887fbba)
 
 # 7. Problemas
-> List any major problems you had.
+
+No planejamento inicial definido na Milestone 1, a funcionalidade extra do projeto seria um sistema de cashback por meio do uso de "BookPoints", mas devido à dificuldade de implementação optamos por alterar a funcionalidade extra para um sistema de busca.
   
 # 8. Comentários Adicionais
 > Any comments you wish to add.
