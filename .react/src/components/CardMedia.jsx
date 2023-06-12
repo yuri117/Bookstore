@@ -49,42 +49,52 @@ const BtComprar = styled(Button)({
   },
 });
 
-function ImgMediaCard({src,alt}) {
+function ImgMediaCard({tipo,preco,nome,arq,estoque}) {
   const navigate = useNavigate();
+  const pathbook = "./../../../visual/livros/" +tipo+"/"+arq+".jpg"
   const clickHandler = (e) => {
     navigate("/book",{
       state:{
-        link:src
+        nome:nome,
+        preco:preco,
+        estoque:estoque,
+        tipo:tipo,
+        link:pathbook,
       }
     })
   }
   return (
-    <Card sx={{ maxWidth: 345,backgroundColor:"#8dbeda",padding:2,borderRadius:5}}>
+    <Card sx={{ minHeight:520 ,maxWidth: 345,backgroundColor:"#8dbeda",padding:2,borderRadius:5,display:"flex",flexDirection:"column",justifyContent:"space-between"}}>
       <CardMedia
         component="img"
-        alt={alt}
+        alt={nome}
         height="330"
-        image={src}
-        sx={{margin:"auto"}}
+        image={pathbook}
+        sx={{marginTop:"0"}}
       />
-      <CardContent sx={{textAlign:"center"}}>
-        <Typography gutterBottom variant="h5" component="div">
-            {alt}
-        </Typography>
-        <Typography sx={{fontWeight: 'bold'}} variant="h6" component="div">
-            R$ 99,90
-        </Typography>
-      </CardContent>
-      <CardActions sx={{justifyContent:"center"}}>
-        <BtComprar size="small" onClick={clickHandler}>Comprar</BtComprar>
-      </CardActions>
+      <div>
+        <CardContent sx={{textAlign:"center"}}>
+          <Typography gutterBottom variant="h6" component="div">
+              {nome}
+          </Typography>
+          <Typography sx={{fontWeight: 'bold'}} variant="h6" component="div">
+              R$ {preco}
+          </Typography>
+        </CardContent>
+        <CardActions sx={{justifyContent:"center"}}>
+          <BtComprar size="small" onClick={clickHandler}>Comprar</BtComprar>
+        </CardActions>
+      </div>
     </Card>
   );
 }
 
 ImgMediaCard.propTypes = {
-    src:PropTypes.any,
-    alt:PropTypes.string,
+    tipo: PropTypes.any,
+    preco:PropTypes.string,
+    estoque:PropTypes.string,
+    arq:PropTypes.any,
+    nome:PropTypes.string,
 }
 
 export default ImgMediaCard

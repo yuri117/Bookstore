@@ -13,7 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 
-const pages = ['Loja', 'Sobre', 'Serviços','Contato'];
+const pages = ['Livros', 'Sobre', 'Serviços','Contato'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function NavBar() {
@@ -39,7 +39,7 @@ function NavBar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <img src="/visual/logo_teste.png" alt="Logo do Site" style={{width:"80px",margin:"5px"}}></img>
           <Typography
             variant="h6"
             noWrap
@@ -55,7 +55,7 @@ function NavBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            BOOKSTORE
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -127,7 +127,7 @@ function NavBar() {
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+              <IconButton sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
               </IconButton>
             </Tooltip>
