@@ -9,6 +9,7 @@ import {Link,useParams,useLocation, useNavigate} from 'react-router-dom';
 import { useState } from 'react';
 
 import useLocalStorage from "./../hooks/useLocalStorage";
+import useAuth from '../hooks/useAutentication';
 
 const BtComprar = styled(Button)({
     marginTop:'15px',
@@ -54,6 +55,7 @@ const BtComprar = styled(Button)({
 const BookPage = (props) =>{
     const navigate = useNavigate();
     const location = useLocation();
+    const {signed} = useAuth();
     const [qtd, setQtd] = useState(1);
     const txtPath = location.state.link.split(".jpg")[0] + ".txt"
     const name = location.state.nome.split(" ");
@@ -102,6 +104,9 @@ const BookPage = (props) =>{
         })
         cart.push(book);
         localStorage.setItem("myCart",JSON.stringify(cart));
+        if (!signed) {
+            navigate("/login")
+        }
         navigate("/checkout")
     };
 
