@@ -29,37 +29,38 @@ function getStepContent(step,pnome,snome,rua,bairro,CEP,estado,cidade,nomeCartao
   }
 }
 
-async function getDBBook(nome){
+async function getDBBook(book){
   debugger
   let DBbook;
-  const res = await fetch(`http://localhost:3030/livros?nome=${nome}`,{
+  let qtdAtual;
+  const res = await fetch(`http://localhost:3030/livros?nome=${JSON.parse(book).nome}`,{
                           method:"GET",
                           headers:{
                           Accept: "application/json"
                           }
                           })
   DBbook = await res.json()
-  return await DBbook[0]
+  qtdAtual = (Number(DBbook[0].estoque) - Number(JSON.parse(book).qtd))
+  const res2 = await fetch(`http://localhost:3030/livros/${DBbook[0].id}`,{
+      method:"PATCH",
+      headers:{
+        Accept: "application/json"
+      },
+      body: JSON.stringify({
+        estoque: qtdAtual,
+      })
+    })
+  
+  console.log(res2)
 }
 
 function getBuyDone() {
   debugger
   let cart = localStorage.getItem('myCart');
   cart = JSON.parse(cart);
-  let DBbookId = 0;
-  let qtdAtual = 0;
+  getDBBook(cart)
   cart.forEach(book =>{
-    let DBbook = getDBBook(JSON.parse(book).nome)
-    console.log(DBbook)
-    fetch(`http://localhost:3030/livros/${DBbook.id}`,{
-      method:"PATCH",
-      headers:{
-        Accept: "application/json"
-      },
-      body: JSON.stringify({
-        qtd: (Number(qtdAtual) - Number(JSON.parse(book).qtd)),
-      })
-    })
+    getDBBook(book)
   })
   localStorage.setItem("myCart",null)
   return
