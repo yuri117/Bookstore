@@ -30,7 +30,7 @@ function getStepContent(step,pnome,snome,rua,bairro,CEP,estado,cidade,nomeCartao
 }
 
 async function getDBBook(book){
-  debugger
+  debugger;
   let DBbook;
   let qtdAtual;
   const res = await fetch(`http://localhost:3030/livros?nome=${JSON.parse(book).nome}`,{
@@ -42,12 +42,13 @@ async function getDBBook(book){
   DBbook = await res.json()
   qtdAtual = (Number(DBbook[0].estoque) - Number(JSON.parse(book).qtd))
   const res2 = await fetch(`http://localhost:3030/livros/${DBbook[0].id}`,{
-      method:"PATCH",
-      headers:{
-        Accept: "application/json"
+      headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json"
       },
+      method: "PATCH",
       body: JSON.stringify({
-        estoque: qtdAtual,
+        estoque: `${qtdAtual}`,
       })
     })
   
