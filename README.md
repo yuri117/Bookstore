@@ -121,13 +121,25 @@ Encontramos muita dificuldade na elaboração do footer das paginas, pretendemos
   
 # 4. Plano de Teste
 
-> Text describing the tests that will be performed. If an automatic test tool/framework is used (ex: Selenium, JUnit, Spock), the code for the tests can be used.
+Como plano de testes desenvolvemos 2 tipos:
+- Realizar busca de qualquer livro através do search na página inicial e realizar uma compra, para isso é necessário fazer um
+login na qual usamos o LocalStorage
+- Tentar realizar uma compra  passando mais do que o máximo permitido em estoque.
   
 # 5. Resultados dos Testes
-> Text describing the test results. If an automatic test tool/framework is used, its output can be used.
+
+- No primeiro teste deve correr tudo tranquilo, única etapa a mais será criar um login e senha na plataforma e acessá-lo
+- No segundo o próprio site não permite que o usuário adicione mais do que a quantidade em estoque na compra.
   
 # 6. Procedimentos para execução
-> A step-by-step guide to run your code. You should start telling how to install whatever software you need, then how to download/build your program, and finally how to set up the environment to run it. Imagine that someone installing will just follow these commands (nothing more).
+
+Passo a passo para execução:
+1. Abra o terminal e digite: cd .react
+2. digite: npm install
+3. digite: json-server --watch products.json --port 3030
+4. digite: npm run dev
+
+Com isso a aplicação já estará configurada para uso e será possível realizar os testes.
   
 # 7. Problemas
 > List any major problems you had.
