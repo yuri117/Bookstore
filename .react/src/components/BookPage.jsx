@@ -106,8 +106,9 @@ const BookPage = (props) =>{
         localStorage.setItem("myCart",JSON.stringify(cart));
         if (!signed) {
             navigate("/login")
+        }else{
+            navigate("/checkout")
         }
-        navigate("/checkout")
     };
 
     return(

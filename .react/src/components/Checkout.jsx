@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import CssBaseline from "@mui/material/CssBaseline";
 import Paper from '@mui/material/Paper';
@@ -29,6 +29,42 @@ function getStepContent(step,pnome,snome,rua,bairro,CEP,estado,cidade,nomeCartao
   }
 }
 
+async function getDBBook(nome){
+  debugger
+  let DBbook;
+  const res = await fetch(`http://localhost:3030/livros?nome=${nome}`,{
+                          method:"GET",
+                          headers:{
+                          Accept: "application/json"
+                          }
+                          })
+  DBbook = await res.json()
+  return await DBbook[0]
+}
+
+function getBuyDone() {
+  debugger
+  let cart = localStorage.getItem('myCart');
+  cart = JSON.parse(cart);
+  let DBbookId = 0;
+  let qtdAtual = 0;
+  cart.forEach(book =>{
+    let DBbook = getDBBook(JSON.parse(book).nome)
+    console.log(DBbook)
+    fetch(`http://localhost:3030/livros/${DBbook.id}`,{
+      method:"PATCH",
+      headers:{
+        Accept: "application/json"
+      },
+      body: JSON.stringify({
+        qtd: (Number(qtdAtual) - Number(JSON.parse(book).qtd)),
+      })
+    })
+  })
+  localStorage.setItem("myCart",null)
+  return
+}
+
 class Checkout extends React.Component {
   state = {
     activeStep: 0,
@@ -47,7 +83,6 @@ class Checkout extends React.Component {
   };
 
   handleNext = () => {
-    console.log(this.state)
     this.setState(state => ({
       activeStep: state.activeStep + 1
     }));
@@ -71,10 +106,17 @@ class Checkout extends React.Component {
     })
   }
 
+  handleBuy = () => {
+    debugger
+    getBuyDone()
+    this.setState(state => ({
+      activeStep: state.activeStep + 1
+    }));
+  }
+
   render() {
     
     const { activeStep,pnome,snome,rua,bairro,CEP,estado,cidade,nomeCartao,numCartao,cpfTitular,dataVenc,cvv } = this.state;
-    console.log(activeStep);
     return (
       <React.Fragment>
           <CssBaseline/>
@@ -109,7 +151,7 @@ class Checkout extends React.Component {
                         <Button
                           variant="contained"
                           color="primary"
-                          onClick={this.handleNext}
+                          onClick={this.handleBuy}
 
                         >
                           Finalizar Pedido
