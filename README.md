@@ -144,6 +144,8 @@ Com isso a aplicação já estará configurada para uso e será possível realiz
 # 7. Problemas
 
 No planejamento inicial definido na Milestone 1, a funcionalidade extra do projeto seria um sistema de cashback por meio do uso de "BookPoints", mas devido à dificuldade de implementação optamos por alterar a funcionalidade extra para um sistema de busca.
+
+Por enquanto o usuário consegue forçar um número maior que a quantidade em estoque mas ajustaremos isso para o Milestone 3
   
 # 8. Comentários Adicionais
 > Any comments you wish to add.
