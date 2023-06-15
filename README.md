@@ -136,10 +136,12 @@ login na qual usamos o LocalStorage
 Passo a passo para execução:
 1. Abra o terminal e digite: cd .react
 2. digite: npm install
-3. Certifiqui-se de ter permissão de admnistrador e digite:
+3. Certifique-se de ter permissão de admnistrador e digite:
+
    json-server --watch products.json --port 3030
    
-5. Abra outro terminal paralelo na mesma pasta e digite:
+4. Abra outro terminal paralelo na mesma pasta e digite:
+   
    npm run dev
 
 Com isso a aplicação já estará configurada para uso e será possível realizar os testes.
