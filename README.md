@@ -124,12 +124,12 @@ Encontramos muita dificuldade na elaboração do footer das paginas, pretendemos
 Como plano de testes desenvolvemos 2 tipos:
 - Realizar busca de qualquer livro através do search na página inicial e realizar uma compra, para isso é necessário fazer um
 login na qual usamos o LocalStorage
-- Tentar realizar uma compra  passando mais do que o máximo permitido em estoque.
+- Tentar realizar uma compra passando mais do que o máximo permitido em estoque.
   
 # 5. Resultados dos Testes
 
 - No primeiro teste deve correr tudo tranquilo, única etapa a mais será criar um login e senha na plataforma e acessá-lo
-- No segundo o próprio site não permite que o usuário adicione mais do que a quantidade em estoque na compra.
+- No segundo teste, era esperado que o usuário não conseguisse finalizar a compra, porém ainda nao conseguimos implementar uma solução que lide com essa situação. No Milestone 3 isso estará resolvido.
   
 # 6. Procedimentos para execução
 
@@ -145,7 +145,7 @@ Com isso a aplicação já estará configurada para uso e será possível realiz
 
 No planejamento inicial definido na Milestone 1, a funcionalidade extra do projeto seria um sistema de cashback por meio do uso de "BookPoints", mas devido à dificuldade de implementação optamos por alterar a funcionalidade extra para um sistema de busca.
 
-Por enquanto o usuário consegue forçar um número maior que a quantidade em estoque mas ajustaremos isso para o Milestone 3
+Por enquanto o usuário consegue forçar uma compra com um número maior que a quantidade em estoque mas ajustaremos isso para o Milestone 3.
   
 # 8. Comentários Adicionais
 > Any comments you wish to add.
