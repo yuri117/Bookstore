@@ -21,13 +21,13 @@ export default function Home() {
         Accept: "application/json"
       }
     }).then(res => res.json())
-      .then(res => setBooks(res))
+      .then(res =>{ 
+        setBooks(res)
+        setFiltered(res)
+      })
       .catch(error => console.log("error",error))
   },[]);
 
-  useEffect(()=>{
-    setFiltered(books)
-  })
 
   const clickHandler = (e) => {
     const aux = books.filter((book) => {
@@ -41,7 +41,7 @@ export default function Home() {
   return (
     <Box sx={{ flexGrow: 1,maxWidth:"1200px",margin: "auto", marginTop:5, backgroundColor:"#fff",padding:5,alignItems:"center",display:'flex',flexDirection:"column" }}>
       <Paper
-        sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400,margin:"20px",backgroundColor:"#8dbeda" }}
+        sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', MaxWidth: 400,margin:"20px",backgroundColor:"#8dbeda" }}
       >
         <InputBase
           sx={{ ml: 1, flex: 1,color:"white" }}
