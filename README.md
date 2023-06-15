@@ -142,7 +142,8 @@ Passo a passo para execução:
 Com isso a aplicação já estará configurada para uso e será possível realizar os testes.
   
 # 7. Problemas
-> List any major problems you had.
+
+No planejamento inicial definido na Milestone 1, a funcionalidade extra do projeto seria um sistema de cashback por meio do uso de "BookPoints", mas devido à dificuldade de implementação optamos por alterar a funcionalidade extra para um sistema de busca.
   
 # 8. Comentários Adicionais
 > Any comments you wish to add.
