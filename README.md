@@ -133,8 +133,8 @@ login na qual usamos o LocalStorage
   
 # 6. Procedimentos para execução
 
-Passo a passo para execução:
-1. Abra o terminal e digite: cd .react
+Após clonar o repositório para sua máquina local, execute os seguintes comandos:
+1. Abra o terminal e acesse o diretório: cd .react
 2. digite: npm install
 3. digite: npm install -g json-server
 4. Certifique-se de ter permissão de administrador e digite:
