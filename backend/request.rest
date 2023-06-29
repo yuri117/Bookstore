@@ -1,0 +1,71 @@
+POST http://localhost:4242/api/products
+Content-Type: application/json
+
+{
+    "id": 1,
+    "nome": "A coragem de ser imperfeito",
+    "categoria": "autoajuda",
+    "preco": "27.90",
+    "estoque": "153",
+    "nome_arquivo": "a_coragem_de_ser_imperfeito"
+}
+###
+GET http://localhost:4242/api/products
+
+### 
+GET http://localhost:4242/api/products/649d0f3f4a28fe7764b306d7
+
+###
+DELETE http://localhost:4242/api/products/649d0f3f4a28fe7764b306d7
+
+###
+PUT http://localhost:4242/api/products/649d0f3f4a28fe7764b306d7
+Content-Type: application/json
+
+{
+    "id": 1,
+    "nome": "A coragem de ser imperfeito",
+    "categoria": "autoajuda",
+    "preco": "27.90",
+    "estoque": "153",
+    "nome_arquivo": "a_coragem_de_ser_imperfeito"
+}
+
+###
+POST http://localhost:4242/api/clients
+Content-Type: application/json
+
+{
+    "user": "FelipiYuri",
+    "senha": "senhaFacil123#",
+    "admin": true
+}
+
+###
+POST http://localhost:4242/api/clients
+Content-Type: application/json
+
+{
+    "user": "JONILARE",
+    "senha": "senhaDificil123#",
+    "admin": false
+}
+
+###
+GET http://localhost:4242/api/clients
+
+###
+GET http://localhost:4242/api/clients/649d7556f54de4b3f5541e73
+
+###
+DELETE http://localhost:4242/api/clients/649d7556f54de4b3f5541e73
+
+###
+PUT http://localhost:4242/api/clients/649d7ba8792e5fc05fde73d5
+Content-Type: application/json
+
+{
+    "user": "JONILARE",
+    "senha": "senhaboa123#",
+    "admin": false
+}
