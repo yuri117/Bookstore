@@ -146,6 +146,13 @@ Após clonar o repositório para sua máquina local, execute os seguintes comand
    npm run dev
 
 Com isso a aplicação já estará configurada para uso e será possível realizar os testes.
+
+PROCEDIMENTOS PARA O SERVIDOR BACKEND USANDO NODE.JS
+
+1. Abra na pasta /backend
+2. digite npm install no terminal
+3. digite npm run dev
+4. o servidor estará funcionando na porta 4242 (leia os logs no console!!)
   
 # 7. Problemas
 
