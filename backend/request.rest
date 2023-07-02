@@ -1,14 +1,14 @@
 POST http://localhost:4242/api/products
 Content-Type: application/json
 
-{
-    "id": 1,
-    "nome": "A coragem de ser imperfeito",
-    "categoria": "autoajuda",
-    "preco": "27.90",
-    "estoque": "153",
-    "nome_arquivo": "a_coragem_de_ser_imperfeito"
-}
+   {
+      "id":50,
+      "nome":"Uma Dose Mortal",
+      "categoria":"suspense",
+      "preco":"23.92",
+      "estoque":"27",
+      "nome_arquivo":"uma_dose_mortal"
+   }
 ###
 GET http://localhost:4242/api/products
 
@@ -55,13 +55,13 @@ Content-Type: application/json
 GET http://localhost:4242/api/clients
 
 ###
-GET http://localhost:4242/api/clients/649d7556f54de4b3f5541e73
+GET http://localhost:4242/api/clients/FelipiYuri
 
 ###
-DELETE http://localhost:4242/api/clients/649d7556f54de4b3f5541e73
+DELETE http://localhost:4242/api/clients/FelipiYuri
 
 ###
-PUT http://localhost:4242/api/clients/649d7ba8792e5fc05fde73d5
+PUT http://localhost:4242/api/clients/FelipiYuri
 Content-Type: application/json
 
 {
