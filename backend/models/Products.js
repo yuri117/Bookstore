@@ -11,6 +11,9 @@ const productsSchema = new Schema({
         type: String,
         required: true
     },
+    descricao: {
+        type: String, 
+    },
     categoria: {
         type: String,
         required: true

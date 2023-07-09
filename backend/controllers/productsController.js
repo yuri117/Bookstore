@@ -6,6 +6,7 @@ const productsController = {
             const product = {
                 id: req.body.id,
                 nome: req.body.nome,
+                descricao: req.body.descricao,
                 categoria: req.body.categoria,
                 preco: req.body.preco,
                 estoque: req.body.estoque,
@@ -64,6 +65,7 @@ const productsController = {
             const product = {
                 id: req.body.id,
                 nome: req.body.nome,
+                descricao: req.body.descricao,
                 categoria: req.body.categoria,
                 preco: req.body.preco,
                 estoque: req.body.estoque,
