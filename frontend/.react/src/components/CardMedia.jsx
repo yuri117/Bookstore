@@ -49,16 +49,17 @@ const BtComprar = styled(Button)({
   },
 });
 
-function ImgMediaCard({tipo,preco,nome,arq,estoque}) {
+function ImgMediaCard({book}) {
   const navigate = useNavigate();
-  const pathbook = "./../../../visual/livros/" +tipo+"/"+arq+".jpg"
+  const pathbook = "./../../../visual/livros/" +book.categoria+"/"+book.nome_arquivo+".jpg"
   const clickHandler = (e) => {
     navigate("/book",{
       state:{
-        nome:nome,
-        preco:preco,
-        estoque:estoque,
-        tipo:tipo,
+        book:book,
+        nome:book.nome,
+        preco:book.preco,
+        estoque:book.estoque,
+        tipo:book.tipo,
         link:pathbook,
       }
     })
@@ -67,7 +68,7 @@ function ImgMediaCard({tipo,preco,nome,arq,estoque}) {
     <Card sx={{ minHeight:520 ,maxWidth: 345,backgroundColor:"#8dbeda",padding:2,borderRadius:5,display:"flex",flexDirection:"column",justifyContent:"space-between"}}>
       <CardMedia
         component="img"
-        alt={nome}
+        alt={book.nome}
         height="330"
         image={pathbook}
         sx={{marginTop:"0"}}
@@ -75,10 +76,10 @@ function ImgMediaCard({tipo,preco,nome,arq,estoque}) {
       <div>
         <CardContent sx={{textAlign:"center"}}>
           <Typography gutterBottom variant="h6" component="div">
-              {nome}
+              {book.nome}
           </Typography>
           <Typography sx={{fontWeight: 'bold'}} variant="h6" component="div">
-              R$ {preco}
+              R$ {book.preco}
           </Typography>
         </CardContent>
         <CardActions sx={{justifyContent:"center"}}>

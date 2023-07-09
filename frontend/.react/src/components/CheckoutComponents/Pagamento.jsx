@@ -1,11 +1,17 @@
 import React from 'react';
 import { TextField, Grid } from '@mui/material';
 import Button from '@mui/material/Button';
-
+import Alert from '@mui/material/Alert';
+import { useState } from 'react';
 
 export default function Pagamento({nomeCartao,numCartao,cpfTitular,dataVenc,cvv,nextStep,change}){
 
+  const [error,setError] = useState("");
   const clickHandler = (e) => {
+    if (nomeCartao === "" || numCartao === "" || cpfTitular === "" || dataVenc === "" || cvv === "") {
+      setError("Preencha todos os campos!")
+      return
+    }
     nextStep()
   }
 
@@ -29,6 +35,9 @@ export default function Pagamento({nomeCartao,numCartao,cpfTitular,dataVenc,cvv,
         </Grid>
       </Grid>
       <div style={{display:"flex",justifyContent:"center",width:"80%",margin:"auto",marginTop:8}}>
+        {error && (
+          <Alert onClose={() =>setError("")}severity="error">{error}</Alert>
+        )}
         <Button variant="contained" onClick={clickHandler} sx={{alignContent:"center"}}>Próximo</Button>
       </div>
     </form>

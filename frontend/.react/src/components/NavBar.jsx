@@ -12,6 +12,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import LogoutIcon from '@mui/icons-material/Logout';
+import SettingsIcon from '@mui/icons-material/Settings';
 import useAuth from '../hooks/useAutentication';
 import { Link, useNavigate } from 'react-router-dom';
 import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
@@ -22,8 +23,12 @@ const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
-  const {signed,signout} = useAuth()
+  const {signed,signout,user} = useAuth()
   const navigate = useNavigate()
+
+  React.useEffect(() => {
+    console.log(signed);
+  }, []);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -37,11 +42,15 @@ function NavBar() {
   };
 
   const handleOpenCheckout = () => {
-    navigate("/checkout");
+    navigate("/carrinho");
   }
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
+
+  const handleOpenSettings = () => {
+    navigate("/admin");
+  }
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
@@ -103,23 +112,32 @@ function NavBar() {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Login">
-              {signed > 0 ?(
-                <IconButton sx={{ p: 0 }} onClick={handleOpenLogout} color='white'>
-                <LoginIcon fontSize='medium' sx={{color:"white"}}/>
-                </IconButton>
-                
+              {signed && user.role ==="admin" && (
+                <Tooltip title="Logout">
+                  <Button variant="contained" style={{margin:"10px",backgroundColor: '#1E5EAC'}} onClick={handleOpenSettings} startIcon={<SettingsIcon fontSize='medium' sx={{color:"white"}}/>}>
+                    CONFIGS
+                  </Button>
+                </Tooltip>
+              )}
+              {signed == true ?(
+              <Tooltip title="Logout">
+                <Button variant="contained" style={{margin:"10px",backgroundColor: '#1E5EAC'}} onClick={handleOpenLogout} startIcon={<LogoutIcon fontSize='medium' sx={{color:"white"}}/>}>
+                  SAIR
+                </Button>
+              </Tooltip>
               ):(
-                <IconButton sx={{ p: 0 }} onClick={handleOpenLogin} color='white'>
-                <LoginIcon fontSize='large' sx={{color:"white"}}/>
-                </IconButton>
+                <Tooltip title="Login">
+                  <Button variant="contained" style={{margin:"10px",backgroundColor: '#1E5EAC'}} onClick={handleOpenLogin} startIcon={<LoginIcon fontSize='medium' sx={{color:"white"}}/>}>
+                    ENTRAR
+                  </Button> 
+                </Tooltip>
+
               ) }
-            </Tooltip>
             <Tooltip title="Cart">
-              {signed > 0 ?(
-                <IconButton sx={{ p: 0, marginLeft:5}} onClick={handleOpenCheckout} color='white'>
-                <ShoppingCartCheckoutIcon fontSize='medium' sx={{color:"white"}}/>
-                </IconButton>
+              {signed ?(
+                <Button variant="contained" style={{margin:"10px",backgroundColor: '#1E5EAC'}} onClick={handleOpenCheckout} startIcon={<ShoppingCartCheckoutIcon fontSize='medium' sx={{color:"white"}}/>}>
+                  CARRINHO
+                </Button> 
               ):(
                 <h2></h2>
               ) }
