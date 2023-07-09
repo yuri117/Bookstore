@@ -1,19 +1,26 @@
 POST http://localhost:4242/api/products
 Content-Type: application/json
 
-   {
-      "id":50,
-      "nome":"Uma Dose Mortal",
-      "categoria":"suspense",
-      "preco":"23.92",
-      "estoque":"27",
-      "nome_arquivo":"uma_dose_mortal"
-   }
+{
+      "id": 17,
+      "nome": "Harry Potter e o Prisioneiro de Azkaban",
+      "descricao": "",
+      "categoria": "aventura",
+      "preco": "24.90",
+      "estoque": "21",
+      "nome_arquivo": "harry_potter_e_o_prisioneiro_de_azkaban"
+    }
+
+
+
 ###
 GET http://localhost:4242/api/products
 
 ### 
 GET http://localhost:4242/api/products/649d0f3f4a28fe7764b306d7
+
+###
+DELETE http://localhost:4242/api/products
 
 ###
 DELETE http://localhost:4242/api/products/649d0f3f4a28fe7764b306d7

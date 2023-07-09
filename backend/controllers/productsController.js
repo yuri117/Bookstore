@@ -59,6 +59,19 @@ const productsController = {
             console.log(`Erro: ${error}`);
         }
     },
+    deleteAll: async(req, res) => {
+        try {
+            const product = await ProductsModel.find();
+            if (product == null){
+                res.status(404).json({msg: "Nenhum produto encontrado."});
+                return;
+            }
+            const deletedProduct = await ProductsModel.deleteMany();
+            res.status(200).json({deletedProduct, msg: "Todos produtos excluído com sucesso."});
+        } catch (error) {
+            console.log(`Erro: ${error}`);
+        }
+    },
     update: async(req, res) => {
         try {
             const id = req.params.id; 

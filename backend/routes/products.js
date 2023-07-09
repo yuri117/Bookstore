@@ -8,6 +8,8 @@ router.route("/products").get((req, res) => productsController.getAll(req, res))
 
 router.route("/products/:id").get((req, res) => productsController.get(req, res));
 
+router.route("/products").delete((req, res) => productsController.deleteAll(req, res));
+
 router.route("/products/:id").delete((req, res) => productsController.delete(req, res));
 
 router.route("/products/:id").put((req, res) => productsController.update(req, res));
