@@ -15,7 +15,7 @@ export default function Home() {
   const [search,setSearch] = useState('');
   const [filtered, setFiltered] = useState([...books]);
   useEffect(()=>{
-    fetch('http://localhost:3030/livros',{
+    fetch('http://localhost:4242/api/products',{
       method:"GET",
       headers:{
         Accept: "application/json"

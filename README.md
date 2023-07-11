@@ -121,37 +121,30 @@ Encontramos muita dificuldade na elaboração do footer das paginas, pretendemos
   
 # 4. Plano de Teste
 
-Como plano de testes desenvolvemos 2 tipos:
-- Realizar busca de qualquer livro através do search na página inicial e realizar uma compra, para isso é necessário fazer um
-login na qual usamos o LocalStorage
+Como plano de testes desenvolvemos 3 tipos:
+- Realizar compra podendo excluir ou editar produtos, filtrando eles também.
 - Tentar realizar uma compra passando mais do que o máximo permitido em estoque.
+- entrar em um usuário admin (user: admin, senha:admin) e editar um livro.
+- entrar em um usuário admin (user: admin, senha:admin) e cadastrar um livro.
+- entrar em um usuário admin (user: admin, senha:admin) e tornar outro user admin.
   
 # 5. Resultados dos Testes
 
-- No primeiro teste deve correr tudo tranquilo, única etapa a mais será criar um login e senha na plataforma e acessá-lo
-- No segundo teste, era esperado que o usuário não conseguisse finalizar a compra, porém ainda nao conseguimos implementar uma solução que lide com essa situação. No Milestone 3 isso estará resolvido.
+Espera-se que em todos os testes não ocorram erros e o usuário tenha uma boa usabilidade da plataforma
   
 # 6. Procedimentos para execução
 
 Após clonar o repositório para sua máquina local, execute os seguintes comandos:
-1. Abra o terminal e acesse o diretório: cd .react
-2. digite: npm install
-3. digite: npm install -g json-server
-4. Certifique-se de ter permissão de administrador e digite:
-
-   json-server --watch products.json --port 3030
-   
-4. Abra outro terminal paralelo na mesma pasta e digite:
-   
-   npm run dev
-
-Com isso a aplicação já estará configurada para uso e será possível realizar os testes.
+1. Abra o terminal e acesse o diretório: cd frontend .react
+2. Abra o terminal e acesse o diretório: cd .react
+3. digite: npm install
+4. digite: npm run dev
 
 PROCEDIMENTOS PARA O SERVIDOR BACKEND USANDO NODE.JS
-
-1. Abra na pasta /backend
-2. digite npm install no terminal
-3. digite npm run dev
+0. Abra um novo terminal
+1. cd backend
+2. digite: npm install
+3. digite: npm run dev
 4. o servidor estará funcionando na porta 4242 (leia os logs no console!!)
   
 # 7. Problemas
@@ -159,6 +152,8 @@ PROCEDIMENTOS PARA O SERVIDOR BACKEND USANDO NODE.JS
 No planejamento inicial definido na Milestone 1, a funcionalidade extra do projeto seria um sistema de cashback por meio do uso de "BookPoints", mas devido à dificuldade de implementação optamos por alterar a funcionalidade extra para um sistema de busca.
 
 Por enquanto o usuário consegue forçar uma compra com um número maior que a quantidade em estoque mas ajustaremos isso para o Milestone 3.
+
+Acreditamos que não há problemas no Milestone 3
   
 # 8. Comentários Adicionais
 > Any comments you wish to add.

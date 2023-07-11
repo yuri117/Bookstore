@@ -1,5 +1,5 @@
 import { useNavigate,Link } from "react-router-dom";
-import useAuth from "../../../hooks/useAutentication"
+import useAuth from "../../hooks/useAutentication"
 import { useState } from "react";
 import Paper from '@mui/material/Paper';
 import { TextField,Grid } from '@mui/material';
@@ -12,17 +12,17 @@ const Login = () => {
     const {signin} = useAuth();
     const navigate = useNavigate()
 
-    const [email,setEmail] = useState("");
+    const [user,setuser] = useState("");
     const [senha,setSenha] = useState("");
     const [error,setError] = useState("");
 
-    const handleLogin = () => {
-        if(!email | !senha){
+    const handleLogin = async (e) => {
+        e.preventDefault();
+        if(!user | !senha){
             setError("Preencha todos os campos!")
             return;
         }
-
-        const res = signin(email,senha);
+        const res = await signin(user,senha);
 
         if (res){
             setError(res);
@@ -40,7 +40,7 @@ const Login = () => {
                     </Typography>
             <Grid container spacing={2} sx={{width:"100%",margin:"auto",textAlign:"center"}}>
                 <Grid item sm={12}>
-                    <TextField label="Email" variant="outlined" value={email} onChange={(e) => [setEmail(e.target.value),setError("")]} fullWidth />
+                    <TextField label="user" variant="outlined" value={user} onChange={(e) => [setuser(e.target.value),setError("")]} fullWidth />
                 </Grid>
                 <Grid item  sm={12}>
                     <TextField type="password" label="Senha" variant="outlined" value={senha} onChange={(e) => [setSenha(e.target.value),setError("")]} fullWidth />

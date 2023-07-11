@@ -30,7 +30,6 @@ function getStepContent(step,pnome,snome,rua,bairro,CEP,estado,cidade,nomeCartao
 }
 
 async function getDBBook(book){
-  debugger;
   let DBbook;
   let qtdAtual;
   const res = await fetch(`http://localhost:3030/livros?nome=${JSON.parse(book).nome}`,{
@@ -56,7 +55,6 @@ async function getDBBook(book){
 }
 
 function getBuyDone() {
-  debugger
   let cart = localStorage.getItem('myCart');
   cart = JSON.parse(cart);
   getDBBook(cart)
@@ -109,7 +107,6 @@ class Checkout extends React.Component {
   }
 
   handleBuy = () => {
-    debugger
     getBuyDone()
     this.setState(state => ({
       activeStep: state.activeStep + 1

@@ -1,5 +1,5 @@
 import { useNavigate,Link } from "react-router-dom";
-import useAuth from "../../../hooks/useAutentication"
+import useAuth from "../../hooks/useAutentication";
 import { useState } from "react";
 import Paper from '@mui/material/Paper';
 import Typography from "@mui/material/Typography";
@@ -13,38 +13,42 @@ const Register = () => {
     const {signup} = useAuth();
     const navigate = useNavigate()
 
-    const [email,setEmail] = useState("");
+    const [user,setUser] = useState("");
     const [senha,setSenha] = useState("");
     const [senha2,setSenha2] = useState("");
     const [error,setError] = useState("");
+    const [message,setMessage] = useState('');
 
-    const handleRegister = () => {
-        if(!email | !senha){
+    const handleRegister = async (e) => {
+        e.preventDefault();
+        if(!user | !senha){
             setError("Preencha todos os campos!")
             return;
         } else if(senha !== senha2){
             setError("As senhas não são iguais!")
-        }   
-
-        const res = signup(email,senha);
-
+        }
+        
+        const res = await signup(user,senha);
         if (res){
             setError(res);
             return;
         }
-        <Alert severity="sucess">Usuário cadastrado com sucesso!</Alert>
-        navigate("/")
+        setMessage("Usuário Cadastrado com sucesso!")
+        setSenha("");
+        setSenha2("");
+        setUser("");
+        return;
 
     };
 
     return(
         <Paper sx={{width:"30%",margin:"auto",marginTop:5,padding:5}}>
             <Typography component="h1" variant="h4" align="center">
-                        Register
-                    </Typography>
+                Register
+            </Typography>
             <Grid container spacing={2} sx={{width:"100%",margin:"auto",textAlign:"center"}}>
                 <Grid item sm={12}>
-                    <TextField label="Email" variant="outlined" value={email} onChange={(e) => [setEmail(e.target.value),setError("")]} fullWidth />
+                    <TextField label="userName" variant="outlined" value={user} onChange={(e) => [setUser(e.target.value),setError("")]} fullWidth />
                 </Grid>
                 <Grid item  sm={12}>
                     <TextField type="password" label="Senha" variant="outlined" value={senha} onChange={(e) => [setSenha(e.target.value),setError("")]} fullWidth />
@@ -55,6 +59,9 @@ const Register = () => {
                 <Grid item sm={12}>
                     {error !== "" && (
                         <Alert severity="error">{error}</Alert>
+                    )}
+                    {message !== '' &&(
+                        <Alert onClose={() => navigate("/")}severity="success">{message}</Alert>
                     )}
                 </Grid>
                 <Grid item sm={12}>

@@ -1,11 +1,17 @@
 import React from 'react';
 import { TextField, Grid } from '@mui/material';
 import Button from '@mui/material/Button';
+import { useState } from 'react';
+import Alert from '@mui/material/Alert';
 
 export default function Endereco({pnome,snome,rua,bairro,CEP,estado,cidade,nextStep,change}){
   
-  
+  const [error,setError] = useState("");
   const clickHandler = (e) => {
+    if (pnome === "" || snome === "" || rua === "" || bairro === "" || CEP === "" || estado === "" || cidade === "") {
+      setError("Preencha todos os campos!")
+      return
+    }
     nextStep()
   }
 
@@ -36,6 +42,9 @@ export default function Endereco({pnome,snome,rua,bairro,CEP,estado,cidade,nextS
         </Grid>
       </Grid>
       <div style={{display:"flex",justifyContent:"center",width:"80%",margin:"auto",marginTop:8}}>
+        {error && (
+          <Alert onClose={() =>setError("")}severity="error">{error}</Alert>
+        )}
         <Button variant="contained" onClick={clickHandler} sx={{alignContent:"center"}}>Próximo</Button>
       </div>
     </form>

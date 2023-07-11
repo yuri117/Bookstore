@@ -7,9 +7,9 @@ import { styled } from '@mui/material/styles';
 import TextField from '@mui/material/TextField';
 import {Link,useParams,useLocation, useNavigate} from 'react-router-dom';
 import { useState } from 'react';
-
 import useLocalStorage from "./../hooks/useLocalStorage";
 import useAuth from '../hooks/useAutentication';
+import axios from 'axios';
 
 const BtComprar = styled(Button)({
     marginTop:'15px',
@@ -56,6 +56,7 @@ const BookPage = (props) =>{
     const navigate = useNavigate();
     const location = useLocation();
     const {signed} = useAuth();
+    const book = location.state.book;
     const [qtd, setQtd] = useState(1);
     const txtPath = location.state.link.split(".jpg")[0] + ".txt"
     const name = location.state.nome.split(" ");
@@ -65,6 +66,7 @@ const BookPage = (props) =>{
 
     const preco = location.state.preco
     const [text,setText] = useState("");
+    axios.get(`http://localhost:4242/api/products/${book._id}`).then(res => setText(book.descricao))
     fetch(txtPath)
     .then(r => r.text())
     .then(text => {
@@ -72,38 +74,52 @@ const BookPage = (props) =>{
     });
 
     // Função que ira atribur o livro ao carrinho
-    const clickHandlerCart = (e) => {
+    const clickHandlerCart = () => {
+        debugger;
         let cart = localStorage.getItem('myCart');
         cart = JSON.parse(cart);
         if (cart == null) {
             cart = [];
         }
-        const book = JSON.stringify({
-            nome: location.state.nome,
-            link:location.state.link,
-            preco: location.state.preco,
-            qtd: qtd,
-        })
-        cart.push(book);
+        const i = cart.findIndex(book => book.nome === location.state.nome);
+        if (i > -1) {
+            const qtd_final = Number(cart[i].qtd) + Number(qtd);
+            if (qtd_final > location.state.estoque) {
+                cart[i].qtd = location.state.estoque;
+            }
+            else{
+                cart[i].qtd = qtd_final;
+            }
+        }
+        else{
+            const book ={
+                nome: location.state.nome,
+                link:location.state.link,
+                preco: location.state.preco,
+                qtd: qtd,
+                estoque:location.state.estoque,
+            }
+            cart.push(book);
+        }
         localStorage.setItem("myCart",JSON.stringify(cart));
         console.log(cart)
     };
 
-    // Função que ira atribur o livro ao carrinho e levar ao checkout
-    const clickHandlerCheckout = (e) => {
-        let cart = localStorage.getItem('myCart');
-        cart = JSON.parse(cart);
-        if (cart == null) {
-            cart = [];
+    const handleQtd = (qtd) => {
+        if (qtd > location.state.estoque) {
+            setQtd(location.state.estoque)
         }
-        const book = JSON.stringify({
-            nome: location.state.nome,
-            link:location.state.link,
-            preco: location.state.preco,
-            qtd: qtd,
-        })
-        cart.push(book);
-        localStorage.setItem("myCart",JSON.stringify(cart));
+        if (qtd < 1) {
+            setQtd(1);
+        }
+        else{
+            setQtd(qtd);
+        }
+    }
+
+    // Função que ira atribur o livro ao carrinho e levar ao checkout
+    const clickHandlerCheckout = () => {
+        clickHandlerCart()
         if (!signed) {
             navigate("/login")
         }else{
@@ -147,7 +163,7 @@ const BookPage = (props) =>{
                             InputProps={{
                                 inputProps:{min:1,max:Number(location.state.estoque)}
                             }}
-                            onChange={e => setQtd(e.target.value)}
+                            onChange={e => handleQtd(e.target.value)}
                             value={qtd}
                         />
                     </Grid>

@@ -1,4 +1,7 @@
 import { createContext, useEffect, useState } from "react";
+import axios, {isCancel, AxiosError} from 'axios';
+import bcrypt from 'bcryptjs';
+
 
 export const AuthContext = createContext({});
 
@@ -7,56 +10,67 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     const userToken = localStorage.getItem("user_token");
-    const usersStorage = localStorage.getItem("users_bd");
+    const isLogged = localStorage.getItem("loggedIn");
 
-    if (userToken && usersStorage) {
-      const hasUser = JSON.parse(usersStorage)?.filter(
-        (user) => user.email === JSON.parse(userToken).email
-      );
+    if (userToken) {
+      const username = JSON.parse(userToken).username
+      const role = JSON.parse(userToken).role
 
-      if (hasUser) setUser(hasUser[0]);
+
+      setUser({username,role});
     }
   }, []);
 
-  const signin = (email, password) => {
-    const usersStorage = JSON.parse(localStorage.getItem("users_bd"));
-
-    const hasUser = usersStorage?.filter((user) => user.email === email);
-
-    if (hasUser?.length) {
-      if (hasUser[0].email === email && hasUser[0].password === password) {
-        const token = Math.random().toString(36).substring(2);
-        localStorage.setItem("user_token", JSON.stringify({ email, token }));
-        setUser({ email, password });
-        return;
-      } else {
-        return "E-mail ou senha incorretos!";
-      }
-    } else {
-      return "Usuário não cadastrado!";
+  async function login(username,password){
+    const response = await axios.get(`http://localhost:4242/api/clients/${username}`)
+    .then(res => res.data)
+    console.log(response)
+    if(response.length === 0){
+      return "Usuário não cadastrado";
     }
+    let hash = response[0].senha;
+    bcrypt.compare(password, hash,(err, res) => {
+      if(!res){
+        return "Usuário ou senha incorreta!"
+
+      }
+    })
+    let role = "user";
+    if (response[0].admin) {
+      role = "admin";
+      
+    }
+    const token = Math.random().toString(36).substring(2);
+    localStorage.setItem("user_token", JSON.stringify({ username, token,role}));
+    setUser({ username, password ,role });
+    return;
+
+  }
+
+  const signin = (username, password) => {
+    const response = login(username,password)
+    return response;
   };
 
-  const signup = (email, password) => {
-    const usersStorage = JSON.parse(localStorage.getItem("users_bd"));
-
-    const hasUser = usersStorage?.filter((user) => user.email === email);
-
-    if (hasUser?.length) {
-      return "Já tem uma conta com esse E-mail!";
+  async function register(username,password) {
+    const response = await axios.get(`http://localhost:4242/api/clients/${username}`)
+    .then(res => res.data)
+    
+    if (response.length !== 0) {
+      return "Usuário já cadastrado!"
     }
 
-    let newUser;
+    const response2 = await axios.post("http://localhost:4242/api/clients",{
+      "user":username,
+      "senha":password,
+      "admin":false
+    }).then(res => {return;})
+    .catch(err =>{return err;})    
+  }
 
-    if (usersStorage) {
-      newUser = [...usersStorage, { email, password }];
-    } else {
-      newUser = [{ email, password }];
-    }
-
-    localStorage.setItem("users_bd", JSON.stringify(newUser));
-
-    return;
+  const signup = (username, password) => {
+    const response = register(username,password);
+    return response;
   };
 
   const signout = () => {
@@ -67,7 +81,7 @@ export const AuthProvider = ({ children }) => {
 
   return (
     <AuthContext.Provider
-      value={{ user, signed: !!user, signin, signup, signout }}
+      value={{ user, signed: Boolean(user), signin, signup, signout }}
     >
       {children}
     </AuthContext.Provider>
