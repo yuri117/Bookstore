@@ -1,3 +1,7 @@
+// Criação de rotas para o modelo de products, com os métodos de restful API
+// GET, POST, PUT E DELETE (além da variação getAll e deleteAll)
+
+
 const router = require("express").Router()
 
 const productsController = require("../controllers/productsController")

@@ -1,3 +1,6 @@
+// Criação de rotas para o modelo de clients, com os métodos de restful API
+// GET, POST, PUT E DELETE (além da variação getAll)
+
 const router = require("express").Router()
 
 const clientController = require("../controllers/clientController");

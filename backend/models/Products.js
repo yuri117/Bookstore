@@ -1,3 +1,6 @@
+// Modelo de "tabela" dos produtos, no caso, dos livros.
+
+
 const mongoose = require("mongoose");
 
 const { Schema } = mongoose;
