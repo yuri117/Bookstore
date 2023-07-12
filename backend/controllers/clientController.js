@@ -1,9 +1,11 @@
-const bcrypt = require("bcryptjs");
+// Bcrypt será utilizado para criação de hash das senhas, para não armazenarmos as
+// senhas do usuário nos servidores e apenas o hash delas.
 
-
+const bcrypt = require("bcrypt");
 
 const ClientModel = require("../models/Client");
 
+// Implementação dos métodos da resftul API
 const clientController = {
     create: async(req, res) => {
         try {

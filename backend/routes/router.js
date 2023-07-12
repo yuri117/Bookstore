@@ -1,3 +1,5 @@
+// Esse js adiciona as rotas de clients e products ao router que será usado em app.js
+
 const router = require("express").Router();
 
 // Products router

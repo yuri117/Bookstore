@@ -1,5 +1,6 @@
 const {Products: ProductsModel } = require("../models/Products");
 
+// Implementação dos métodos da resftul API
 const productsController = {
     create: async(req, res) => {
         try{

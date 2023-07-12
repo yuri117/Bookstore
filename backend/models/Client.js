@@ -1,3 +1,5 @@
+// Modelo de "tabela" do cliente
+
 const mongoose = require("mongoose")
 
 const { Schema } = mongoose

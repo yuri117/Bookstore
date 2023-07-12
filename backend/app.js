@@ -13,9 +13,10 @@ conn();
 // Router
 const routes = require("./routes/router")
 
+// Setando todas as rotas do servidor para /api
 app.use("/api", routes)
 
 app.listen(4242, () => console.log("Servidor rodando na porta 4242"));
 
 // Username = BalverSarethan
-// Senha = eGKkO3IfImh1oqNX
+// Senha = favor entrar em contato com o administrador do banco de dados
