@@ -89,6 +89,18 @@ const BookEdit = () =>{
 
     }
 
+    const handleEstoque = (value) => {
+
+        if(value < 1){
+            setError("Por favor coloque um valor de estoque maior que 0!")
+        }
+        else{
+            setEstoque(value)
+        }
+
+
+    }
+
     const handleCancel = () =>{
         setCategoria(book.categoria);
         setDescricao(book.descricao);
@@ -157,7 +169,7 @@ const BookEdit = () =>{
                     </Select>
                     <Grid container spacing={2} sx={{marginTop:2}}>
                         <Grid item xs={6} md={6} sx={{display:"flex",alignItems:"center"}}>
-                            <TextField required id="standard-required" label="Em estoque" type='number' variant="standard" value={estoque} fullWidth defaultValue={book.estoque} onChange={e => setEstoque(e.target.value)} inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }} />
+                            <TextField required id="standard-required" label="Em estoque" type='number' variant="standard" value={estoque} fullWidth defaultValue={book.estoque} onChange={e => handleEstoque(e.target.value)} inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }} />
                         </Grid>
                         <Grid item xs={6} md={4} sx={{display:"flex",justifyContent:"center"}}>
                             <TextField  required id="standard-required" label="Preço" variant="standard" defaultValue={book.preco} value={preco} fullWidth onChange={e => setPreco(e.target.value)} inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }} />

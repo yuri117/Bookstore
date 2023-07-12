@@ -93,6 +93,7 @@ const BookPage = (props) =>{
         }
         else{
             const book ={
+                _id:location.state.book._id,
                 nome: location.state.nome,
                 link:location.state.link,
                 preco: location.state.preco,
@@ -123,7 +124,7 @@ const BookPage = (props) =>{
         if (!signed) {
             navigate("/login")
         }else{
-            navigate("/checkout")
+            navigate("/carrinho")
         }
     };
 
@@ -168,8 +169,8 @@ const BookPage = (props) =>{
                         />
                     </Grid>
                   </Grid>
-                  <BtComprar size="large" onClick={clickHandlerCart}>Adicionar ao Carrinho</BtComprar>
-                  <BtComprar size="large" onClick={clickHandlerCheckout}>Comprar</BtComprar>
+                  <BtComprar size="large" onClick={clickHandlerCart} disabled={location.state.estoque < 1}>Adicionar ao Carrinho</BtComprar>
+                  <BtComprar size="large" onClick={clickHandlerCheckout} disabled={location.state.estoque < 1}>Comprar</BtComprar>
               </Grid>
             </Grid>
         </Box>

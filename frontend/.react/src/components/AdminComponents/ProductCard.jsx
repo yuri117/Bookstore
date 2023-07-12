@@ -41,7 +41,15 @@ export default function ProductCard({_id}) {
     
     const pathbook = "./../../../visual/livros/" +categoria+"/"+nomeArq+".jpg"
 
-    const clickHandler = () => {
+    const clickHandler = async () => {
+      await fetch(`http://localhost:4242/api/products/${_id}`,{
+        method:"GET",
+        headers:{
+            Accept: "application/json"
+        },
+      })
+      .then(res => res.json())
+      .then(res => {livro = res})
         navigate("/bookEdit",{
           state:{
             _id:_id,

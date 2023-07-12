@@ -12,6 +12,7 @@ import  Pagamento  from "./CheckoutComponents/Pagamento";
 import Review from "./CheckoutComponents/Review";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useTheme } from '@mui/material/styles';
+import axios from "axios";
 
 
 const steps = ["Endereço de Entrega", "Forma de Pagamento", "Revise sua compra"];
@@ -32,24 +33,25 @@ function getStepContent(step,pnome,snome,rua,bairro,CEP,estado,cidade,nomeCartao
 async function getDBBook(book){
   let DBbook;
   let qtdAtual;
-  const res = await fetch(`http://localhost:3030/livros?nome=${JSON.parse(book).nome}`,{
+  debugger;
+  const res = await fetch(`http://localhost:4242/api/products/${book._id}`,{
                           method:"GET",
                           headers:{
                           Accept: "application/json"
                           }
-                          })
-  DBbook = await res.json()
-  qtdAtual = (Number(DBbook[0].estoque) - Number(JSON.parse(book).qtd))
-  const res2 = await fetch(`http://localhost:3030/livros/${DBbook[0].id}`,{
-      headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json"
-      },
-      method: "PATCH",
-      body: JSON.stringify({
-        estoque: `${qtdAtual}`,
-      })
-    })
+                          }).then(res => res.json())
+  qtdAtual = (Number(book.estoque) - Number(book.qtd))
+  const res2 = await axios.put(`http://localhost:4242/api/products/${book._id}`,
+      {
+        id:res.id,
+        descricao:res.descricao,
+        nome:res.nome,
+        categoria:res.categoria,
+        nome_arquivo:res.nome_arquivo,
+        estoque:qtdAtual,
+        preco:res.preco
+      }
+    )
   
   console.log(res2)
 }
@@ -57,7 +59,6 @@ async function getDBBook(book){
 function getBuyDone() {
   let cart = localStorage.getItem('myCart');
   cart = JSON.parse(cart);
-  getDBBook(cart)
   cart.forEach(book =>{
     getDBBook(book)
   })
